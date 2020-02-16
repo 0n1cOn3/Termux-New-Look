@@ -1,89 +1,85 @@
 start () {
 	echo -e "\033[1;92m"
-echo "please wait....."
+echo "Haben Sie einen Moment Geduld..."
 cd $HOME/Termux-New-Look
 echo
-echo -e "\033[91m [+] Updating.........."
+echo -e "\033[91m [•] Update wird ausgeführt"
 apt update
 apt upgrade
 clear
-echo -e "\033[92m [+] Wget installing........."
+echo -e "\033[92m [•] wget wird installiert"
 sleep 0.40
 apt install wget
 clear
-echo -e "\033[93m [+] Removing Zsh........."
-sleep 0.40
-apt remove zsh
-clear
-echo -e "\033[94m [+] Installing toilet ........"
+echo -e "\033[94m [•] toilet wird installiert"
 sleep 0.40
 apt-get install toilet
 clear
-echo -e "\033[95m [+] Installing figlet ............"
+echo -e "\033[95m [+] figlet wird installiert"
 sleep 0.40
 apt-get install figlet
 clear
-echo -e "\033[96m [+] Installing ncurses-utils......."
+echo -e "\033[96m [+] ncurses-utils wird installiert"
 sleep 0.40
 apt-get install ncurses-utils
 clear
-echo -e "\033[91m [+] Installing termux-api......."
+echo -e "\033[91m [+] Termux-api wird installiert"
 sleep 0.40
 apt-get install termux-api
 clear
-echo -e "\033[92m [+] Installing openssh........"
+echo -e "\033[92m [+] OpenSSH wird installiert"
 sleep 0.40
 apt-get install openssh
 clear
-echo -e "\033[93m [+] Installing curl........"
+echo -e "\033[93m [+] Curl wird installiert"
 sleep 0.40
 apt-get install curl
 clear
-echo -e "\033[94m [+] Installing python........"
+echo -e "\033[94m [+] Python 2.7 wird installiert"
 sleep 0.40
 apt-get install python
 clear
-echo -e "\033[95m [+] Installing apksigner........"
+echo -e "\033[95m [+] APKSigner wird installiert"
 sleep 0.40
 apt-get install apksigner
 clear
-echo -e "\033[96m [+] Installing netcat........"
+echo -e "\033[96m [+] NetCat wird installiert"
 sleep 0.40
 apt install netcat
 clear
-echo -e "\033[91m [√] Successfull all packages installed"
+echo -e "\033[91m [√] Alle Pakete wurden erfolgreich installiert"
 sleep 0.20
 rm -f .changelog.sh
-echo -e "\033[92m [+] unzip n.zip....."
+echo -e "\033[92m [+] Entpacke n.zip."
 sleep 0.50
 unzip n.zip
-echo -e "\033[94m [+] Creating Folder......."
+echo -e "\033[94m [+] Erstelle Ordner"
 sleep 0.50
 mkdir $PREFIX/Virus2 > /dev/null 2>&1
 mkdir /sdcard/Virus2 > /dev/null 2>&1
 
 
-echo -e "\033[95m [+] Copying files........"
+echo -e "\033[95m [+] Dateien werden kopiert"
 sleep 0.30
 cp -f com.zip $PREFIX/Virus2
 cp -f bat.zip $PREFIX/Virus2
 cp -f shell.zip $PREFIX/Virus2
 cd $PREFIX/Virus2
-echo -e "\033[96m [+] Unzip com.zip......"
+echo -e "\033[96m [+] Entpacke com.zip......"
 unzip com.zip
-echo -e "\033[95m [+] Unzip bat.zip......"
+echo -e "\033[95m [+] Entpacke bat.zip......"
 unzip bat.zip
-echo -e "\033[94m [+] Unzip shell.zip......"
+echo -e "\033[94m [+] Entpacke shell.zip......"
 unzip shell.zip
-echo -e "\033[93m [√] Successfully all unzip "
+echo -e "\033[93m [√] Alles wurde erfolgreich entpackt "
 sleep 0.20
 clear
 echo -e "\033[1;92m"
-echo " Now setuping Termux-New-Look......."
+echo " Termux-New-Look wird vorbereitet"
 sleep 1
 cd $HOME
 rm -f .bashrc
-echo "Waiting......"
+echo "Einen Moment Bitte"
 cd $HOME/Termux-New-Look
 pip install -r requirements.txt > /dev/null 2>&1
 cp -f .bashrc $HOME
@@ -103,15 +99,16 @@ sleep 3
 cd $HOME
 mkdir Termux-New-Look-Installed
 rm update* > /dev/null 2>&1
-echo "Successfully Changed Termux"
+echo "Termux wurde erfolgreich angepasst"
 echo
-echo "Restart Termux"
+sleep 0.40
+echo "Termux wird neugestartet"
 }
 #default_setup="Y"
 clear
 echo
 echo
-echo -e -n "	\033[92m Stating setup\033[91m (\033[93mY\033[94m/\033[96mN) "
+echo -e -n "	\033[92m Setup wird gestartet\033[91m (\033[93mY\033[94m/\033[96mN) "
 read setup
 #setup="${setup:-{default_setup}}"
 case $setup in
